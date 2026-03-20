@@ -1,0 +1,1 @@
+Test file to add the folders correctly to the repostory
