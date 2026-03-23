@@ -1,0 +1,11 @@
+Como el nombre indica, este es un amplificador Simple de Dos Transistores, el esquematico se encuentra en la Charla 11, Figura 138 en la edición en español del libro. (To-Do, adjuntar una imagen del esquematico original).
+
+El circuito que se presenta con este mismo nombre en la carpeta PCBs tiene las siguientes alteraciones respecto al original:
+
+	1°- Se utilizaron transistores model 2N331, homologos al MP39 sovietico (Según la tabla entregada al final del libro).
+	2°- Se añadieron resistencias de 1 kOhm antes de los condensadores de 10 microFarad y la entrada de la fuente de poder, esto para que funcionara la simulación SPICE del circuito. (Estas resistencias no son necesarias para su construcción según tengo entendido).
+	3°- Se añadió una "Tierra" equivalente a 0 Volts para que funcionara adecuadamente la simulación de SPICE, esto nuevamente no es necesario para la manufactura mientras se tenga una tierra común.
+	4°- Se eliminó la resistencia de 10 kOhm a la entrada dek amplificador ya que no es necesaria para el funcionamiento del circuito (en el libro se explica que está ahí para actuar como  la carga de la fuente de oscilaciones de frecuencia por lo que su uso dependerá de lo que se conecte a la entrada.
+
+Cabe mencionar que con este transistor, al menos durante la simulación SPICE se encontró que el circuito amplificaba de manera más optima utilizando el transistor 2N331 cuando se utilizaba una resistencia de 50 kOhm en R1 y una resistencia de 60 kOhm en R3, sin embargo se dejó la resistencia con el valor nominal de 180 kOhm que aparece en el libro para mantener la similitud con este, sin embargo es un detalle que vale la pena mencionar si se quiere implementar el circuito.
+Para finalizar dejo una nota, ya que el 2N331 pareciera no ser facil de encontrar y es solo el homologo contemporaneo del MP39, en una revisión futura de este documento modificaré el circuito para que utilice un transistor de Silicio, mas comunes actualmente, muy probablemente un 2N3906.
