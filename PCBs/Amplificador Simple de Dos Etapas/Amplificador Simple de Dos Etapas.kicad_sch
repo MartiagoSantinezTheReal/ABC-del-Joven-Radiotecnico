@@ -1410,6 +1410,16 @@
 		)
 		(uuid "6b41aa97-d66a-4789-9890-c8be57ad1079")
 	)
+	(text ".control\n  * 1. Ejecutar la simulacion (10ms da tiempo a que la onda se estabilice)\n  tran 10u 10m\n  \n  * 2. Medir voltajes (ignorar los primeros 2ms del arranque)\n  meas tran v_in_pp PP V(Entrada_-) FROM=2m\n  meas tran v_out_pp PP V(Salida_-) FROM=2m\n  \n  * 3. Calcular ganancia\n  let ganancia_calculada = v_out_pp / v_in_pp\n  \n  * 4. Crear un separador visual para la consola\n  echo \"\"\n  echo \"==================================================\"\n  echo \"      RESULTADOS DE RENDIMIENTO Y DISTORSION      \"\n  echo \"==================================================\"\n  \n  * 5. Imprimir la ganancia\n  print ganancia_calculada\n  \n  * 6. Calcular Distorsion Armonica Total (THD) a 1kHz\n  echo \"--------------------------------------------------\"\n  fourier 1k V(Salida_-)\n  \n  echo \"==================================================\"\n.endc"
+		(exclude_from_sim no)
+		(at 54.864 121.158 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "febf4943-a183-4287-9c1a-5407099572f2")
+	)
 	(junction
 		(at 62.23 54.61)
 		(diameter 0)
@@ -1435,16 +1445,16 @@
 		(uuid "29a73260-ed4c-463c-bb1e-9fad511d5626")
 	)
 	(junction
+		(at 101.6 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ce53b95-fd28-4768-aa2a-9d3a6faf40f2")
+	)
+	(junction
 		(at 99.06 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6c14caf0-243e-4602-9c50-a3345d3b93a9")
-	)
-	(junction
-		(at 95.25 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6dcfb778-43c0-4955-b80b-deb33eff6876")
 	)
 	(junction
 		(at 88.9 29.21)
@@ -1568,6 +1578,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 54.61) (xy 99.06 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55d3483d-da12-4b84-8cb1-a100b88338f3")
+	)
+	(wire
+		(pts
 			(xy 50.8 29.21) (xy 62.23 29.21)
 		)
 		(stroke
@@ -1628,17 +1648,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 54.61) (xy 99.06 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "722881e9-2993-44aa-a551-896e48f4633c")
-	)
-	(wire
-		(pts
-			(xy 62.23 54.61) (xy 95.25 54.61)
+			(xy 62.23 54.61) (xy 99.06 54.61)
 		)
 		(stroke
 			(width 0)
@@ -1698,6 +1708,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 54.61) (xy 102.87 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9595b968-801a-4693-9113-b8ba3016115a")
+	)
+	(wire
+		(pts
 			(xy 62.23 39.37) (xy 62.23 40.64)
 		)
 		(stroke
@@ -1705,16 +1725,6 @@
 			(type default)
 		)
 		(uuid "a5e25d7f-dcba-466b-94d0-731895a2509a")
-	)
-	(wire
-		(pts
-			(xy 99.06 54.61) (xy 102.87 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab509bcf-4ee3-4ada-bd7b-a649966d670f")
 	)
 	(wire
 		(pts
@@ -1778,7 +1788,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 54.61) (xy 95.25 55.88)
+			(xy 101.6 54.61) (xy 101.6 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2069,7 +2079,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2N331"
+		(property "Value" "2N3906"
 			(at 101.6 48.2599 0)
 			(effects
 				(font
@@ -2105,25 +2115,25 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Library" "/home/martiagosantinez/Desktop/Github/ABC_del_Joven_Radiotecnico/ABC-del-Joven-Radiotecnico/PCBs/2N3906.lib"
+			(at 96.52 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "2N3906"
+			(at 96.52 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(property "Sim.Device" "PNP"
-			(at 96.52 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "2n331.lib"
-			(at 96.52 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "2N331"
 			(at 96.52 46.99 0)
 			(effects
 				(font
@@ -2272,7 +2282,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2N331"
+		(property "Value" "2N3906"
 			(at 64.77 48.2599 0)
 			(effects
 				(font
@@ -2317,7 +2327,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "2n331.lib"
+		(property "Sim.Library" "/home/martiagosantinez/Desktop/Github/ABC_del_Joven_Radiotecnico/ABC-del-Joven-Radiotecnico/PCBs/2N3906.lib"
 			(at 59.69 46.99 0)
 			(effects
 				(font
@@ -2326,7 +2336,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Name" "2N331"
+		(property "Sim.Name" "2N3906"
 			(at 59.69 46.99 0)
 			(effects
 				(font
@@ -2389,7 +2399,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "180k"
+		(property "Value" "220k"
 			(at 53.34 34.2899 0)
 			(effects
 				(font
@@ -2564,7 +2574,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.5"
+		(property "Value" "9"
 			(at 49.53 73.6599 0)
 			(effects
 				(font
@@ -2743,7 +2753,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "180k"
+		(property "Value" "100k"
 			(at 91.44 34.2899 0)
 			(effects
 				(font
@@ -3006,7 +3016,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:0")
-		(at 95.25 55.88 0)
+		(at 101.6 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3015,7 +3025,7 @@
 		(fields_autoplaced yes)
 		(uuid "8fc3a04d-3b4e-48e2-ac99-841a49ddab82")
 		(property "Reference" "#GND01"
-			(at 95.25 60.96 0)
+			(at 101.6 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3024,7 +3034,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 95.25 53.34 0)
+			(at 101.6 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3032,7 +3042,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 55.88 0)
+			(at 101.6 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3041,7 +3051,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Circuit_elements__device"
-			(at 95.25 66.04 0)
+			(at 101.6 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3050,7 +3060,7 @@
 			)
 		)
 		(property "Description" "0V reference potential for simulation"
-			(at 95.25 63.5 0)
+			(at 101.6 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3088,7 +3098,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "470"
 			(at 71.1199 38.1 0)
 			(effects
 				(font
