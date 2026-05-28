@@ -1,0 +1,24 @@
+* Modelo AC183 NPN Germanio - Ajustado para Vbe=0.3V
+.model AC183 NPN(
++ Is=0.8u 
++ Xti=3 
++ Eg=0.67 
++ Vaf=40 
++ Bf=150 
++ Ne=1.5 
++ Ise=0.5u 
++ Ikf=0.1 
++ Xtb=1.5 
++ Br=3 
++ Rc=1 
++ Cjc=45p 
++ Mjc=0.33 
++ Vjc=0.35 
++ Fc=0.5 
++ Cje=120p 
++ Mje=0.33 
++ Vje=0.35 
++ Tr=1.5u 
++ Tf=20n 
++ Ikr=0.01 
++ Rb=20)

@@ -1,0 +1,32 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,9.0.8-1.fc43*%
+%TF.CreationDate,2026-05-27T22:25:19-04:00*%
+%TF.ProjectId,Amplificador de audiofrecuencia con Potencia de Salida Elevada,416d706c-6966-4696-9361-646f72206465,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 9.0.8-1.fc43) date 2026-05-27 22:25:19*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.200000*%
+%TD*%
+%TA.AperFunction,Profile*%
+%ADD11C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X189250000Y-44800000D02*
+X189250000Y-65050000D01*
+X124225000Y-65050000D01*
+X161400000Y-44600000D01*
+X189250000Y-44800000D01*
+D11*
+X59200000Y-24550000D02*
+X189250000Y-24550000D01*
+X189250000Y-65050000D01*
+X59200000Y-65050000D01*
+X59200000Y-24550000D01*
+M02*
